@@ -25,3 +25,12 @@ gcode:
     
     # Display the filament usage on the printer screen
     M117 "Filament used: {{ filament_used }}mm | Mass used: {{ filament_mass }}g | Spool weight: {{ spool_weight }}kg | Percent used: {{ percent_used }}%"
+
+
+#Comment utiliser la macro :
+
+#Vous pouvez appeler la macro après avoir lancé une impression en utilisant la commande @FILAMENT_USAGE.
+#Vous pouvez spécifier le poids de la bobine et la densité du filament en utilisant les variables variable_weight et variable_density, respectivement. Si ces variables ne sont pas définies, elles utiliseront les valeurs par défaut de 1 kg et 1 g/cm^3.
+#La macro recherche les commandes G1 avec l'axe E (extrusion) et calcule la quantité de filament utilisée en additionnant les valeurs extrudées.
+#La macro calcule la masse de filament utilisée en utilisant la densité du filament et ajoute cette valeur à la quantité totale de filament utilisée par l'extrudeur courant.
+#La macro calcule le pourcentage de filament utilisé en fonction du poids de la bobine et affiche la quantité de filament utilisée, la masse de filament utilisée, le poids restant de la bobine et le pourcentage utilisé sur l'écran de l'imprimante à l'aide de la commande M117.
