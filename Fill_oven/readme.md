@@ -8,6 +8,9 @@ BOM
 Board
 
 sensor
-DHT22
+-DHT22
+
+-Si7021
+
 
 -----------
